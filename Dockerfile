@@ -6,6 +6,7 @@ ARG IDEA_VERSION=2022.2.3
 ARG IDEA_BUILD=2022.2.3
 ARG JET_BRAINS_MONO_VERSION=2.242
 ARG SBT_VERSION=1.6.2
+ARG ATLAS_SDK_VERSION=42510
 # ARG ATLAS_SDK_VERSION=8.2.8
 ARG NVM_VERSION=v0.39.2
 ARG NODE_VERSION=16.13.0
@@ -27,8 +28,15 @@ RUN  \
   && mkdir /working/ \
   && cd /working/ \
   && curl -L -o sbt-$SBT_VERSION.deb https://repo.scala-sbt.org/scalasbt/debian/sbt-$SBT_VERSION.deb \
+  && curl -L -o atlassian-sdk.tgz https://marketplace.atlassian.com/download/apps/1210993/version/${ATLAS_SDK_VERSION} \
   && dpkg -i sbt-$SBT_VERSION.deb \
   && rm sbt-$SBT_VERSION.deb \
+  && tar xzfv atlassian-sdk.tgz -C /opt \
+  && mv /opt/atlassian-plugin-sdk-* /opt/atlassian-plugin-sdk \
+  && chown -R developer:developer /opt/atlassian-plugin-sdk \
+  && chmod u+x /opt/atlassian-plugin-sdk/bin/* \
+  && rm atlassian-sdk.tgz \
+  && echo 'export PATH=/opt/atlassian-plugin-sdk/bin:$PATH' >> /home/developer/.bashrc \
   && apt-get update \
   && apt-get --yes install sbt \
   && cd \
@@ -64,7 +72,7 @@ ENV HOME /home/developer
 
 ENV PATH="/home/developer/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 
-# COPY .java /home/developer/.java
+COPY .java /home/developer/.java
 
 RUN mkdir /home/developer/.Idea \
   && ln -sf /home/developer/.Idea /home/developer/$idea_local_dir
