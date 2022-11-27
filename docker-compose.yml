@@ -1,0 +1,20 @@
+version: '3'
+services:
+  ide:
+    image: ziohimself/exalate-dev-env:latest
+    network_mode: "host"
+    volumes:
+      - ${HOME}/.Idea:/home/developer/.Idea
+      - ${HOME}/.Idea.config:/home/developer/.config
+      - ${HOME}/.Idea.java:/home/developer/.java
+      - ${HOME}/.Idea.coursier:/home/developer/.coursier
+      - ${HOME}/.Idea.ivy:/home/developer/.ivy2
+      - ${HOME}/.Idea.sbt:/home/developer/.sbt
+      - ${HOME}/.Idea.maven:/home/developer/.m2
+      - ${HOME}/.Idea.gradle:/home/developer/.gradle
+      - ${HOME}/.Idea.share:/home/developer/.local/share/JetBrains
+      - ${HOME}/dev:/home/developer/dev
+    container_name: idea
+#    command: sleep infinity
+    environment:
+      - DISPLAY=$D

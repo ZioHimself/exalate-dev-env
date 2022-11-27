@@ -1,0 +1,6 @@
+clear control
+clear mod2
+keycode 63 = Control_L
+keycode 67 = Control_L
+keycode 71 = Control_R
+add control = Control_L Control_R

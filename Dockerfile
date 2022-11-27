@@ -55,8 +55,8 @@ RUN curl -fsSL $idea_source -o /opt/idea/installer.tgz \
   && tar --strip-components=1 -xzf installer.tgz \
   && rm installer.tgz \
   ; curl -fsSL $jet_brains_mono -o /opt/idea/fonts.zip \
-  && mkdir -p /home/developer/.local/share \
-  && unzip -d /home/developer/.local/share/fonts -j /opt/idea/fonts.zip \
+  && mkdir -p /usr/share/fonts \
+  && unzip -d /usr/share/fonts /opt/idea/fonts.zip \
   && rm fonts.zip
 
 USER developer
