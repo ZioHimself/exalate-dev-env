@@ -47,11 +47,6 @@ RUN  \
   && . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION} \
   && rm -rf /var/lib/apt/lists/* 
 
-#  && echo "deb https://packages.atlassian.com/debian/atlassian-sdk-deb/ stable contrib" >>/etc/apt/sources.list \
-#  && curl -L -o atlassian-gpg-public https://packages.atlassian.com/api/gpg/key/public \
-#  && apt-key add atlassian-gpg-public \
-#  && apt-get --yes install sbt atlassian-plugin-sdk=${ATLAS_SDK_VERSION} \
-
 
 ARG idea_source=https://download.jetbrains.com/idea/ideaIU-${IDEA_BUILD}.tar.gz
 ARG idea_local_dir=.IntelliJIdea${IDEA_VERSION}

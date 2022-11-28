@@ -13,6 +13,7 @@ services:
       - ${HOME}/.Idea.maven:/home/developer/.m2
       - ${HOME}/.Idea.gradle:/home/developer/.gradle
       - ${HOME}/.Idea.share:/home/developer/.local/share/JetBrains
+      - ${HOME}/.ssh:/home/developer/.ssh
       - ${HOME}/dev:/home/developer/dev
     container_name: idea
 #    command: sleep infinity
