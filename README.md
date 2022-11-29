@@ -16,7 +16,7 @@ Docker container to run IntelliJ IDEA Ultimate Edition (https://www.jetbrains.co
 8. run `docker pull ziohimself/exalate-dev-env:0.1.1`
 9. run `docker tag ziohimself/exalate-dev-env:0.1.1 ziohimself/exalate-dev-env:latest`
 10. run `idea.sh`
-11. import settings.zip from https://github.com/ZioHimself/exalate-dev-env into your IntelliJ
+11. import settings.zip in your IntelliJ from [/home/developer/dev/settings.zip](home/dev/settings.zip)
 12. install plugins "Scala" and ".ignore"
 
 Docker Hub Page: https://hub.docker.com/r/ziohimself/exalate-dev-env/
