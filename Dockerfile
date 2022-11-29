@@ -67,7 +67,7 @@ ENV HOME /home/developer
 
 ENV PATH="/home/developer/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 
-COPY .java /home/developer/.java
+COPY home/.Idea.java /home/developer/.java
 
 RUN mkdir /home/developer/.Idea \
   && ln -sf /home/developer/.Idea /home/developer/$idea_local_dir
