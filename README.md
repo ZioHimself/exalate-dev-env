@@ -12,7 +12,7 @@ Docker container to run IntelliJ IDEA Ultimate Edition (https://www.jetbrains.co
    4. copy [home/.Xmodmap](home/.Xmodmap) into ~/
    5. copy [home/.Idea.java](home/.Idea.java) into ~/
 6. run `chmod +x ~/dev/bin/idea.sh`
-7. add ~/dev/bin to path: `export PATH=$PATH:${HOME}/dev/bin/`
+7. add ~/dev/bin to path: `echo "export PATH=$PATH:${HOME}/dev/bin/" >> ~/.zshrc`
 8. run `docker pull ziohimself/exalate-dev-env:0.1.1`
 9. run `docker tag ziohimself/exalate-dev-env:0.1.1 ziohimself/exalate-dev-env:latest`
 10. run `idea.sh`
