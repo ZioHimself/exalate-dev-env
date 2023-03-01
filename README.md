@@ -15,9 +15,12 @@ Docker container to run IntelliJ IDEA Ultimate Edition (https://www.jetbrains.co
 7. add ~/dev/bin to path: `echo "export PATH=$PATH:${HOME}/dev/bin/" >> ~/.zshrc`
 8. run `docker pull ziohimself/exalate-dev-env:0.1.1`
 9. run `docker tag ziohimself/exalate-dev-env:0.1.1 ziohimself/exalate-dev-env:latest`
-10. run `idea.sh`
-11. import settings.zip in your IntelliJ from [/home/developer/dev/settings.zip](home/dev/settings.zip)
-12. install plugins ["Scala"](https://plugins.jetbrains.com/plugin/1347-scala) and [".ignore"](https://plugins.jetbrains.com/plugin/20485--ignore)
+10. restart terminal
+11. start XQuartz
+12. run `export DISPLAY=":0"`
+13. run `idea.sh`
+14. import settings.zip in your IntelliJ from [/home/developer/dev/settings.zip](home/dev/settings.zip)
+15. install plugins ["Scala"](https://plugins.jetbrains.com/plugin/1347-scala) and [".ignore"](https://plugins.jetbrains.com/plugin/20485--ignore)
 
 Docker Hub Page: https://hub.docker.com/r/ziohimself/exalate-dev-env/
 
