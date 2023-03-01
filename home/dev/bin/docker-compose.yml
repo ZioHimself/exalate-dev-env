@@ -2,7 +2,13 @@ version: '3'
 services:
   ide:
     image: ziohimself/exalate-dev-env:latest
-    network_mode: "host"
+#    network_mode: "host"
+    network_mode: "bridge"
+    ports:
+      - 9000:9000
+#    networks:
+#      - web
+#      - default
     volumes:
       - ${HOME}/.Idea:/home/developer/.Idea
       - ${HOME}/.Idea.config:/home/developer/.config
@@ -19,3 +25,10 @@ services:
 #    command: sleep infinity
     environment:
       - DISPLAY=$D
+      - DB_IP=$DB_IP
+#networks:
+#  web:
+#    external: true
+#  default:
+#    external:
+#      name: bridge
