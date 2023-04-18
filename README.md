@@ -3,24 +3,27 @@ Docker container to run IntelliJ IDEA Ultimate Edition (https://www.jetbrains.co
 ### Install on Mac
 1. install [docker](https://docs.docker.com/get-docker/)
 2. install [xquartz](https://formulae.brew.sh/cask/xquartz)
-3. configure xquartz to allow network connections Preferences > security > "Allow access from network clients"
-4. configure xquartz to map option keys as alts: Preferences > input > "Option keys send Alt_L and Alt_R"
-5. copy [home](home) into ~/ 
+3. start xquartz
+4. configure xquartz to allow network connections Preferences > security > "Allow access from network clients"
+5. configure xquartz to map option keys as alts: Preferences > input > "Option keys send Alt_L and Alt_R"
+6. restart xquartz
+7. confirm that xquartz is working by running `export DISPLAY=":0"; xeyes`
+8. copy [home](home) into ~/ 
    1. copy [home/dev/bin/idea.sh](home/dev/bin/idea.sh) into ~/dev/bin
    2. copy [home/dev/bin/docker-compose.yml](home/dev/bin/docker-compose.yml) into ~/dev/bin
    3. copy [home/dev/settings.zip](home/dev/settings.zip) into ~/dev
    4. copy [home/.Xmodmap](home/.Xmodmap) into ~/
    5. copy [home/.Idea.java](home/.Idea.java) into ~/
-6. run `chmod +x ~/dev/bin/idea.sh`
-7. add ~/dev/bin to path: `echo "export PATH=$PATH:${HOME}/dev/bin/" >> ~/.zshrc`
-8. run `docker pull ziohimself/exalate-dev-env:0.1.1`
-9. run `docker tag ziohimself/exalate-dev-env:0.1.1 ziohimself/exalate-dev-env:latest`
-10. restart terminal
-11. start XQuartz
-12. run `export DISPLAY=":0"`
-13. run `idea.sh`
-14. import settings.zip in your IntelliJ from [/home/developer/dev/settings.zip](home/dev/settings.zip)
-15. install plugins ["Scala"](https://plugins.jetbrains.com/plugin/1347-scala) and [".ignore"](https://plugins.jetbrains.com/plugin/20485--ignore)
+9. run `chmod +x ~/dev/bin/idea.sh`
+10. add ~/dev/bin to path: `echo "export PATH=$PATH:${HOME}/dev/bin/" >> ~/.zshrc`
+11. run `docker pull ziohimself/exalate-dev-env:0.1.1`
+12. run `docker tag ziohimself/exalate-dev-env:0.1.1 ziohimself/exalate-dev-env:latest`
+13. restart terminal
+14. start XQuartz
+15. run `export DISPLAY=":0"`
+16. run `idea.sh`
+17. import settings.zip in your IntelliJ from [/home/developer/dev/settings.zip](home/dev/settings.zip)
+18. install plugins ["Scala"](https://plugins.jetbrains.com/plugin/1347-scala) and [".ignore"](https://plugins.jetbrains.com/plugin/20485--ignore)
 
 Docker Hub Page: https://hub.docker.com/r/ziohimself/exalate-dev-env/
 
