@@ -9,7 +9,7 @@ Docker container to run IntelliJ IDEA Ultimate Edition (https://www.jetbrains.co
 6. restart xquartz
 7. confirm that xquartz is working by running `export DISPLAY=":0"; xeyes` (it's expected that a new window showing eyes startsup)
 8. close the eyes program
-9. download the repository as a zip
+9. download the repository as a zip: https://github.com/ZioHimself/exalate-dev-env/archive/refs/heads/master.zip
 10. unzip the repository zip
 11. copy [home](home) into ~/ : `cp -r exalate-dev-env/dev ~/` (covers all the sub-directories and files)
    1. copy [home/dev/bin/idea.sh](home/dev/bin/idea.sh) into ~/dev/bin
