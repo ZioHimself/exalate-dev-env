@@ -7,7 +7,8 @@ Docker container to run IntelliJ IDEA Ultimate Edition (https://www.jetbrains.co
 4. configure xquartz to allow network connections Preferences > security > "Allow access from network clients"
 5. configure xquartz to map option keys as alts: Preferences > input > "Option keys send Alt_L and Alt_R"
 6. restart xquartz
-7. confirm that xquartz is working by running `export DISPLAY=":0"; xeyes` (it's expected that a new window showing eyes startsup), close the eyes program
+7. confirm that xquartz is working by running `export DISPLAY=":0"; xeyes` (it's expected that a new window showing eyes startsup),
+8. close the eyes program
 9. download the repository as a zip
 10. unzip the repository zip
 11. copy [home](home) into ~/ : `cp -r exalate-dev-env/dev ~/` (covers all the sub-directories and files)
