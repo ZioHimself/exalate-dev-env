@@ -11,12 +11,12 @@ Docker container to run IntelliJ IDEA Ultimate Edition (https://www.jetbrains.co
 8. close the eyes program
 9. download the repository
       1. as a zip:
-            1. https://github.com/ZioHimself/exalate-dev-env/archive/refs/heads/master.zip
+            1. `https://github.com/ZioHimself/exalate-dev-env/archive/refs/heads/master.zip`
             2. unzip the repository zip
       3. or as a git repo:
             1. create folder
-            2. git init
-            3. git remote add origin git@github.com:ZioHimself/exalate-dev-env.git
+            2. `git init`
+            3. `git remote add origin git@github.com:ZioHimself/exalate-dev-env.git`
       
 12. copy [home](home) into ~/ : `cp -r exalate-dev-env/dev ~/` (covers all the sub-directories and files)
       1. copy [home/dev/bin/idea.sh](home/dev/bin/idea.sh) into ~/dev/bin
