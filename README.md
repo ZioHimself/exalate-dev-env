@@ -12,11 +12,11 @@ Docker container to run IntelliJ IDEA Ultimate Edition (https://www.jetbrains.co
 9. download the repository as a zip: https://github.com/ZioHimself/exalate-dev-env/archive/refs/heads/master.zip
 10. unzip the repository zip
 11. copy [home](home) into ~/ : `cp -r exalate-dev-env/dev ~/` (covers all the sub-directories and files)
-   1. copy [home/dev/bin/idea.sh](home/dev/bin/idea.sh) into ~/dev/bin
-   2. copy [home/dev/bin/docker-compose.yml](home/dev/bin/docker-compose.yml) into ~/dev/bin
-   3. copy [home/dev/settings.zip](home/dev/settings.zip) into ~/dev
-   4. copy [home/.Xmodmap](home/.Xmodmap) into ~/
-   5. copy [home/.Idea.java](home/.Idea.java) into ~/
+      1. copy [home/dev/bin/idea.sh](home/dev/bin/idea.sh) into ~/dev/bin
+      2. copy [home/dev/bin/docker-compose.yml](home/dev/bin/docker-compose.yml) into ~/dev/bin
+      3. copy [home/dev/settings.zip](home/dev/settings.zip) into ~/dev
+      4. copy [home/.Xmodmap](home/.Xmodmap) into ~/
+      5. copy [home/.Idea.java](home/.Idea.java) into ~/
 11. run `chmod +x ~/dev/bin/idea.sh`
 12. add ~/dev/bin to path: `echo "export PATH=$PATH:${HOME}/dev/bin/" >> ~/.zshrc`
 13. run `docker pull ziohimself/exalate-dev-env:0.1.1`
