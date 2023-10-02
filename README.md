@@ -18,7 +18,7 @@ Docker container to run IntelliJ IDEA Ultimate Edition (https://www.jetbrains.co
             2. `git init`
             3. `git remote add origin git@github.com:ZioHimself/exalate-dev-env.git`
       
-12. copy [home](home) into ~/ : `cp -r exalate-dev-env/dev ~/` (covers all the sub-directories and files)
+12. copy [home](home) into ~/ : `cp -r exalate-dev-env/home/* ~/` (covers all the sub-directories and files)
       1. copy [home/dev/bin/idea.sh](home/dev/bin/idea.sh) into ~/dev/bin
       2. copy [home/dev/bin/docker-compose.yml](home/dev/bin/docker-compose.yml) into ~/dev/bin
       3. copy [home/dev/settings.zip](home/dev/settings.zip) into ~/dev
