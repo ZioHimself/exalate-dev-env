@@ -25,7 +25,6 @@ services:
 #    command: sleep infinity
     environment:
       - DISPLAY=$D
-      - DB_IP=$DB_IP
 #networks:
 #  web:
 #    external: true
